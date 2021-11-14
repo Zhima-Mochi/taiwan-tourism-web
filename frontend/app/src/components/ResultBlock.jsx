@@ -1,6 +1,6 @@
 import { Container, Navbar, Row, Col, Nav, InputGroup, FormControl, Button } from 'react-bootstrap';
 import lantern from "../icon/TW_Sky Lantern.svg"
-import '../module.css'
+import './module.css'
 import { useEffect, useState } from 'react'
 import Pagination from './Pagination';
 
