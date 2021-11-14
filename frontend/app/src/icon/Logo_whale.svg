@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="141.73px" height="141.73px" viewBox="0 0 141.73 141.73" enable-background="new 0 0 141.73 141.73" xml:space="preserve">
+<g id="圖層_2">
+	<rect x="-4" y="-3.5" fill="#F2F0F0" width="519.5" height="150"/>
+	<text transform="matrix(1 0 0 1 153.5 24.9165)"><tspan x="0" y="0" font-family="'jf-openhuninn-1.1'" font-size="10">Logo設計理念：</tspan><tspan x="0" y="14.4" font-family="'jf-openhuninn-1.1'" font-size="10">用鯨魚的形象描繪出台灣島嶼的形狀。</tspan><tspan x="0" y="43.2" font-family="'jf-openhuninn-1.1'" font-size="10">緣由：</tspan><tspan x="0" y="57.599" font-family="'jf-openhuninn-1.1'" font-size="10">台灣這片土地上許多神話信仰都與鯨魚有密不可分的關係，例如鄭成功傳說</tspan><tspan x="0" y="72" font-family="'jf-openhuninn-1.1'" font-size="10">是「海翁」轉世。在過去，台灣在古文獻上被稱為「鯤島」，「鯤」在古代</tspan><tspan x="0" y="86.4" font-family="'jf-openhuninn-1.1'" font-size="10">神話裡指的是一種海中大魚，也就是鯨魚。而荷蘭人的古地圖上也標示台江</tspan><tspan x="0" y="100.8" font-family="'jf-openhuninn-1.1'" font-size="10">內海為「T Walvis Been」，意指鯨魚聚集棲息的地方。</tspan></text>
+	<rect fill="#FAFAFA" width="141.73" height="141.73"/>
+</g>
+<g id="whale">
+	<g>
+		<path fill="none" stroke="#000000" stroke-width="5" stroke-linecap="round" stroke-linejoin="bevel" stroke-miterlimit="10" d="
+			M106.453,56.053c0.089,1.774,1.62,12.569-6.665,17.537c-5.361,3.214-23.976,1.069-26.863,0.603"/>
+		<path fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel" stroke-miterlimit="10" d="
+			M28.854,88.827c2.493,0.066,18.553,0.651,19.615,0.676"/>
+		<path fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel" stroke-miterlimit="10" d="
+			M21.007,82.192c2.267,0.061,16.869,0.612,17.834,0.634"/>
+		
+			<circle fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel" stroke-miterlimit="10" cx="52.214" cy="65.629" r="1.688"/>
+		<path fill="none" stroke="#000000" stroke-width="5" stroke-linecap="round" stroke-linejoin="bevel" stroke-miterlimit="10" d="
+			M18.035,72.91c1.313-0.004,43.22,1.009,44.738,1.045"/>
+		<path fill="none" stroke="#000000" stroke-width="5" stroke-linecap="round" stroke-linejoin="bevel" stroke-miterlimit="10" d="
+			M63.152,104.14c-24.864-0.581-48.522-19.248-47.962-43.257c0.19-8.123,2.688-7.213,51.688-7.433
+			c47.477-0.213,51.036,0.847,46.857,15.611c-2.448,8.647-12.084,26.181-32.63,32.58"/>
+		<path fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" d="M134.72,39.526
+			c0.11,0.24-0.396,8.062-5.411,12.167c-3.943,3.23-13.542,4.401-13.285,2.983c0.368-2.036,2.003-8.068,5.122-10.3
+			C128.648,39.008,134.557,39.168,134.72,39.526z"/>
+		<path fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" d="M113.426,54
+			c-1.008,1.171-10.178,0.021-14.722-5.759c-4.72-6.002-8.631-16.071-7.19-16.038c4.022,0.089,9.05,2.939,12.441,5.861
+			C109.927,43.208,114.843,52.354,113.426,54z"/>
+		<path fill="none" stroke="#000000" stroke-width="5" stroke-linecap="round" stroke-linejoin="bevel" stroke-miterlimit="10" d="
+			M72.922,74.328c4.28,2.851,6.598,6.635,8.026,13.284c0.708,3.3,0.278,7.827-0.207,13.275c-0.217,2.437-0.445,5.058-0.587,7.837
+			c-0.16,3.127-1.28,7.848-2.332,8.823c-1.962,1.819-6.287-2.595-8.862-5.326c-2.126-2.257-3.94-5.184-5.32-7.979
+			c-1.321-2.678-2.245-5.235-2.662-6.968c-1.291-5.36-0.66-17.504,1.529-22.628"/>
+		<path fill="none" stroke="#000000" stroke-width="5" stroke-linecap="round" stroke-linejoin="bevel" stroke-miterlimit="10" d="
+			M110.355,45.542c2.164,2.391,5.282,12.091,4.673,16.797"/>
+	</g>
+</g>
+</svg>

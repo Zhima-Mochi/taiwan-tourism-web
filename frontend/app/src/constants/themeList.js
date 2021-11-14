@@ -1,0 +1,1 @@
+export const themeList=[['ScenicSpot', "景點"], ["Restaurant", "美食"], ["Activity", "活動"], ["Hotel", "住宿"]];

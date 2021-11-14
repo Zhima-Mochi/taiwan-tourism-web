@@ -1,0 +1,283 @@
+@font-face {
+    font-family: ZenMaruGothic-Black;
+    src: url("../font/ZenMaruGothic-Black.ttf"),
+}
+
+@font-face {
+    font-family: ZenMaruGothic-Bold;
+    src: url("../font/ZenMaruGothic-Bold.ttf")
+}
+
+@font-face {
+    font-family: ZenMaruGothic-Light;
+    src: url("../font/ZenMaruGothic-Light.ttf")
+}
+
+
+@font-face {
+    font-family: ZenMaruGothic-Medium;
+    src: url("../font/ZenMaruGothic-Medium.ttf")
+}
+
+@font-face {
+    font-family: ZenMaruGothic-Regular;
+    src: url("../font/ZenMaruGothic-Regular.ttf")
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.header-main-bar {
+    padding: 3vh 6vw;
+}
+
+.logo-whale {
+    width: 4.5rem;
+    height: auto;
+}
+
+.header-main-bar-title {
+    padding-left: 6vw;
+}
+
+.header-col-left {
+    text-align: center;
+    font-family: ZenMaruGothic-Medium;
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+    color: #00A7BA;
+    opacity: 1;
+}
+
+.header-col-middle {
+    margin: auto;
+    text-align: center;
+    font-family: ZenMaruGothic-Regular;
+    font-size: 0.5rem;
+    color: #173565;
+}
+
+.header-main-bar-navbar {
+    width: 6rem;
+    color: #173565;
+}
+
+.select-part-main-bg {
+    background-image: url(../picture/backgroud.jpg);
+    height: 16rem;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+}
+
+.select-part-main {
+    background: hsla(185, 31%, 51%, 0.1);
+    height: 16rem;
+    opacity: 1;
+    padding: 2rem;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+.select-part-main-title {
+    text-align: center;
+    font-size: 2rem;
+    font-family: ZenMaruGothic-Medium;
+    color: white;
+    letter-spacing: 0.8rem;
+    text-shadow: 0px 3px 6px #00000029;
+}
+
+.select-part-main-sub-title {
+    text-align: center;
+    font-size: 0.1rem;
+    font-family: ZenMaruGothic-Medium;
+    color: white;
+    letter-spacing: 0.1rem;
+    text-shadow: 0px 3px 6px #00000029;
+}
+
+.select-part-main-input-1 {
+    padding-top: 1rem;
+
+}
+
+.select-part-main-box {
+    box-shadow: 0px 5px 10px #00000029;
+}
+
+.spot-list-title-line {
+    font-family: ZenMaruGothic-Regular;
+    color: #00A7BA;
+    filter: invert(50%) sepia(37%) saturate(6316%) hue-rotate(156deg) brightness(98%) contrast(101%);
+    font-size: 1rem;
+}
+
+.spot-list-title-name::before {
+    /* content: url("./icon/TW_Sky Lantern.svg"); */
+    margin-right: 0.2rem;
+}
+
+.resultList {
+    min-height: 22rem;
+}
+
+.pageChangeArrow {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+
+.pageChangeArrow i {
+    color: #93A7C1;
+    position: relative;
+    top: calc(50% - 10px);
+    filter: invert(64%) sepia(37%) saturate(203%) hue-rotate(174deg) brightness(95%) contrast(93%);
+}
+
+.resultImage {
+    border-radius: 10px 10px 0px 0px;
+    width: 100%;
+    height: 12rem;
+    image-rendering: auto;
+    object-fit: cover;
+}
+
+.resultTitle {
+    text-align: left;
+    font: normal normal bold 1.2rem/2rem Microsoft JhengHei;
+    letter-spacing: 1.6px;
+    color: #173565;
+}
+
+.resultOpenTime,
+.resultPhone,
+.resultAddress {
+    text-align: left;
+    font: normal normal normal 1rem/1.2rem Microsoft JhengHei;
+    letter-spacing: 1.4px;
+    color: #173565;
+}
+
+.footerStyle {
+    height: 5rem;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 5rem;
+    background: #00A7BA 0% 0% no-repeat padding-box;
+    font-family: ZenMaruGothic-Regular;
+    letter-spacing: 0.1rem;
+    color: #FFFFFF;
+}
+
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding: 2rem;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+
+@media (max-width: 992px) {
+    .header-main-bar-title {
+        padding-left: 3vw;
+        font-size: 1.5rem;
+    }
+
+    .resultList {
+        min-height: 20rem;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .header-col-left {
+        text-align: center;
+        padding: 1.5vh 0vw;
+    }
+
+    .header-col-middle {
+        text-align: center;
+        align-items: center;
+        padding: auto;
+    }
+
+    .header-main-bar-title {
+        padding: 0rem;
+        font-size: 1.5rem;
+    }
+
+    .logo-whale {
+        float: none;
+        width: 4rem;
+    }
+
+    .header-main-bar-navbar {
+        width: 5rem;
+    }
+
+    .resultList {
+        min-height: 15rem;
+    }
+}
