@@ -1,0 +1,31 @@
+.header {
+    height: $header-sm-height;
+
+    @include lg-width {
+        height: $header-lg-height;
+    }
+}
+
+.logo {
+    height: 30px;
+
+    @include lg-width {
+        height: 45px;
+    }
+}
+
+.logo-word {
+    color: $main-color;
+    font-family: $default-font-style;
+    font-size: 18px;
+    line-height: 20px;
+
+    @include lg-width {
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
+.navbar-box{
+    width: 80px;
+}

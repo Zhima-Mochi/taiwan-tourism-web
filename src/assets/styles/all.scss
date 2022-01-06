@@ -1,0 +1,13 @@
+// CSS reset
+@import-normalize;
+
+// tailwind scss
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "variable";
+@import "mixin";
+@import "wrap";
+@import "fonts";
+@import "main";
