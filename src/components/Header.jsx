@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import logo from '../assets/img/logo.jpeg';
+import navbar_items from '../constants/navbar_items';
 export default function Header() {
     return (
         <div className="wrap">
@@ -10,18 +11,22 @@ export default function Header() {
                         <div className="logo-word">樂遊台灣</div>
                     </div>
                 </NavLink>
-                <div className="flex justify-between">
-                    <NavLink to='/'>
-                        <div className="navbar-box">
-                        
-                        </div>
-                    </NavLink>
-                    <NavLink to='/'>
-                        <div></div>
-                    </NavLink>
-                    <NavLink to='/'>
-                        <div></div>
-                    </NavLink>
+                <div className="hidden md:block">
+                    <div className="flex justify-between">
+                        {Object.entries(navbar_items).map((item) => (
+                            <NavLink key={item[0]} to={'/' + item[1].eng}>
+                                <div className="navbar-box df-ft-fm">
+                                    <div className="text-xs hover-main-color">{item[1].name}</div>
+                                    <div className="text-xs navbar-color">{item[1].eng.replace('_', '').toUpperCase()}</div>
+                                </div>
+                            </NavLink>
+                        ))}
+                    </div>
+                </div>
+                <div>
+                    <div className="md:hidden">
+                            
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,3 +1,19 @@
+.main-color {
+    color: $main-color;
+}
+
+.word-color {
+    color: $word-color;
+}
+
+.navbar-color {
+    color: $navbar-color;
+}
+
+.df-ft-fm {
+    font-family: $default-font-style;
+}
+
 .header {
     height: $header-sm-height;
 
@@ -26,6 +42,31 @@
     }
 }
 
-.navbar-box{
+.navbar-box {
     width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include lg-width {
+        width: 100px;
+    }
+}
+
+.hover-main-color {
+    &:hover {
+        color: $main-color;
+    }
+}
+
+.banner {
+    background-image: url('../img/banner.jpeg');
+    height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include lg-width {
+        height: 400px;
+    }
 }
