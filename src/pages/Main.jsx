@@ -1,9 +1,12 @@
 import Banner from "../components/Banner";
 import Header from "../components/Header";
 
+
 export default function Main() {
-    return (<div>
-        <Header />
-        <Banner />
-    </div>);
+    return (
+        <div>
+            <Header />
+            <Banner />
+        </div>
+    );
 }
