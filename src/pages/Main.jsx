@@ -7,7 +7,6 @@ function* printNumber() {
     }
 }
 export default function Main() {
-
     return (
         <div>
             <Header />

@@ -1,8 +1,8 @@
 import jsSHA from 'jssha';
 
 function getAuthorizationHeader() {
-    const AppID = process.env.REACT_APP_API_ID || 'FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF';
-    const AppKey = process.env.REACT_APP_API_KEY || 'FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF';
+    const AppID = process.env.REACT_APP_TDX_API_ID || 'FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF';
+    const AppKey = process.env.REACT_APP_TDX_API_KEY || 'FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF';
 
     const GMTString = new Date().toGMTString();
     const ShaObj = new jsSHA('SHA-1', 'TEXT');

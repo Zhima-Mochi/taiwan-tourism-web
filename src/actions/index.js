@@ -1,36 +1,18 @@
-import {
-    call,
-    put,
-    takeEvery
-} from "@redux-saga/core/effects";
-
 export const FETCH_SCENICSPOTS_BEGIN = 'FETCH_SCENICSPOTS_BEGIN';
 export const FETCH_SCENICSPOTS_SUCCESS = 'FETCH_SCENICSPOTS_SUCCESS';
 export const FETCH_SCENICSPOTS_FAILED = 'FETCH_SCENICSPOTS_FAILED';
+export const CLEAN_DATA = 'CLEAN_DATA';
 
-export const fetch_scenicspots_begin = () => ({
+export const fetch_scenicspots_begin = (region = "all", keyword = "", skip = 0, limit = -1) => ({
     type: FETCH_SCENICSPOTS_BEGIN,
-});
-
-const fetch_scenicspots_success = data => ({
-    type: FETCH_SCENICSPOTS_SUCCESS,
     payload: {
-        data,
-    },
+        'region': region,
+        'keyword': keyword,
+        'skip': skip,
+        'limit': limit
+    }
 });
 
-function* fetch_scenicspots(region, keyword, skip, limit) {
-    try {
-        const data = yield call(() => fetch('https://example.com/').then(response => response.json()));
-        yield put(fetch_scenicspots_success(data));
-    } catch (e) {
-        yield put({
-            type: FETCH_SCENICSPOTS_FAILED,
-            message: e.message
-        })
-    }
-}
-
-export function* scenicspotSaga() {
-    yield takeEvery(fetch_scenicspots_begin, fetch_scenicspots);
-}
+export const clean_data = () => ({
+    type: CLEAN_DATA,
+})
