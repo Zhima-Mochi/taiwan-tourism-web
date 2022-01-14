@@ -16,4 +16,7 @@
     @include xl-width {
         padding: 0 200px;
     }
+    @include xxl-width {
+        padding: 0 250px;
+    }
 }

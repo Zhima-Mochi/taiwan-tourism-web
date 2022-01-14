@@ -12,5 +12,5 @@ const scenicspotReducer = (state = [], action) => {
     }
 };
 
-const rootReducer = combineReducers({ scenicspot: scenicspotReducer });
+const rootReducer = combineReducers({ scenicspot_data: scenicspotReducer });
 export default rootReducer;

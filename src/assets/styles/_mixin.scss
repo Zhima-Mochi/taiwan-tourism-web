@@ -22,6 +22,12 @@
     }
 }
 
+@mixin xxl-width() {
+    @media (min-width: $veryverylargedevice) {
+        @content;
+    }
+}
+
 @mixin button(){
     cursor: pointer;
     user-select: none;
