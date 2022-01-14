@@ -120,48 +120,54 @@
 
 
 .card {
-    width: 544*0.5px;
+    width: 480*0.5px;
     height: 640*0.5px;
     border-radius: 12px;
     margin: 0 4px;
 
     @include sm-width {
-        width: 544*0.3px;
-        height: 640*0.3px;
-        margin: 0 4px;
+        width: 480*0.35px;
+        height: 640*0.35px;
+        margin: 0 8px;
     }
 
     @include md-width {
-        width: 544*0.35px;
+        width: 480*0.35px;
         height: 640*0.35px;
-        margin: 0 4px;
+        margin: 0 8px;
     }
 
     @include lg-width {
-        width: 544*0.4px;
+        width: 480*0.4px;
         height: 640*0.4px;
         margin: 0 12px;
     }
 
     @include xl-width {
-        width: 544*0.5px;
+        width: 480*0.5px;
         height: 640*0.5px;
         margin: 0 12px;
-
     }
 
     @include xxl-width {
-        width: 544*0.6px;
+        width: 480*0.6px;
         height: 640*0.6px;
     }
 }
 
 .card-img {
     width: 100%;
-    height: 62.5%;
+    height: 57%;
     border-radius: 12px 12px 0 0;
 }
-.card-content{
+
+.card-content {
     width: 100%;
-    height: 37.5%;
+    height: 43%;
+}
+
+.test {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
 }
