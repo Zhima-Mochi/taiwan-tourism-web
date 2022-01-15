@@ -1,5 +1,8 @@
 import logo from './logo.svg';
 import 'animate.css';
+import 'swiper/css';
+import "swiper/css/navigation"
+import "swiper/css/pagination"
 import './assets/styles/all.scss';
 import { Routes, Route } from 'react-router-dom'
 import Main from './pages/Main';

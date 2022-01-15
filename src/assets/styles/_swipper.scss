@@ -1,0 +1,18 @@
+// swiper css
+.swiper-button-prev {
+    color: gray;
+    font-size: 20px;
+
+    &::after {
+        font-size: 20px;
+    }
+}
+
+.swiper-button-next {
+    color: gray;
+    font-size: 20px;
+
+    &::after {
+        font-size: 20px;
+    }
+}

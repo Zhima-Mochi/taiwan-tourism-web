@@ -1,0 +1,72 @@
+import { useEffect, useState } from "react";
+import { ReactComponent as ArrowBack } from '../assets/img/arrow_back.svg';
+import { ReactComponent as ArrowForward } from '../assets/img/arrow_forward.svg';
+import { Swiper, SwiperSlide } from "swiper/react"
+import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper';
+
+const jump = 3
+export default function CardList(props) {
+    const [focusIdx, setFocusIdx] = useState(0);
+    useEffect(() => { setFocusIdx(0) }, [props.data_list]);
+    SwiperCore.use([Navigation, Autoplay, Pagination]);
+    return (<>
+        <div className="sm:hidden">
+            <Swiper
+                slidesPerView={1}
+                navigation={true}
+            >
+                {props.data_list.map((data, idx) => {
+                    return (
+                        <SwiperSlide key={data.ScenicSpotID || idx}>
+                            <div className="flex justify-center py-4">
+                                <props.component data={data} />
+                            </div>
+                        </SwiperSlide>
+                    );
+                })}
+            </Swiper>
+        </div>
+        <div className="hidden sm:block md:hidden">
+            <Swiper
+                slidesPerView={1}
+                navigation={true}
+            >
+                {props.data_list.map((data, idx, arr) => {
+                    return (idx % 2 === 0 ?
+                        <SwiperSlide key={data.ScenicSpotID || idx}>
+                            <div className="flex justify-center py-8">
+                                <props.component data={props.data_list[idx]} />
+                                <props.component data={props.data_list[idx + 1]} />
+                            </div>
+                        </SwiperSlide>
+                        : <div key={data.ScenicSpotID || idx}>
+                        </div>
+                    );
+                })}
+            </Swiper>
+        </div>
+        <div className="hidden md:block">
+            <div className="flex items-center justify-between">
+                <div>
+                    {focusIdx !== 0 ?
+                        <ArrowBack className="btn" onClick={() => setFocusIdx(focusIdx - jump)} fill="gray" />
+                        :
+                        <ArrowBack className="" fill="#CCCCCC" />}
+                </div>
+                <div className="w-11/12 flex justify-between">
+                    <props.component data={props.data_list[focusIdx]} />
+                    <props.component data={props.data_list[focusIdx + 1]} />
+                    <props.component data={props.data_list[focusIdx + 2]} />
+                </div>
+                <div>
+                    {focusIdx + 3 < props.data_list.length ?
+                        <ArrowForward className="btn" onClick={() => setFocusIdx(focusIdx + jump)} fill="gray" />
+                        :
+                        <ArrowForward className="" fill="#CCCCCC" />
+                    }
+                </div>
+            </div>
+        </div>
+    </>
+    );
+}
