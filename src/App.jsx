@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import 'animate.css';
 import './assets/styles/all.scss';
 import { Routes, Route } from 'react-router-dom'
 import Main from './pages/Main';

@@ -18,7 +18,7 @@ export default function Banner() {
             <div className="wrap flex flex-col items-center">
                 <h1 className="text-white decor tracking-widest df-ft-fm text-sm lg:text-lg mt-4 lg:mt-8 mb-4">TRAVEL AROUND TAIWAN, BE FUN!</h1>
                 <div className="w-full md:w-96 flex justify-center items-center mb-4">
-                    <input className="input w-full h-9 rounded-l df-ft-fm" placeholder="輸入目的地、景點或相關關鍵字" onChange={(e) => setKeyword(e.target.value)}></input>
+                    <input className="input w-full h-9 rounded-l df-ft-fm" placeholder="輸入目的地、景點或相關關鍵字" onChange={(e) => setKeyword(e.target.value)} onKeyDown={(e) => { if (e.key === 'Enter') { dispatch(clean_data()); dispatch(fetch_scenicspots_begin(region, keyword, 0, fetch_lim)); } }}></input>
                     <div className="btn main-bg-color h-9 rounded-r flex w-8 justify-center items-center" onClick={() => { dispatch(clean_data()); dispatch(fetch_scenicspots_begin(region, keyword, 0, fetch_lim)); }}>
                         <Search />
                     </div>
