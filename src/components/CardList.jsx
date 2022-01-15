@@ -7,17 +7,23 @@ import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper';
 const jump = 3
 export default function CardList(props) {
     const [focusIdx, setFocusIdx] = useState(0);
-    useEffect(() => { setFocusIdx(0) }, [props.data_list]);
+    const [swiper1, setSwiper1] = useState(null);
+    const [swiper2, setSwiper2] = useState(null);
+
+    useEffect(() => { setFocusIdx(0); }, [props.data_list]);
+    useEffect(() => { swiper1 && swiper1.slideTo(0); swiper2 && swiper2.slideTo(0) }, [swiper1, swiper2, props.data_list])
+
     SwiperCore.use([Navigation, Autoplay, Pagination]);
     return (<>
         <div className="sm:hidden">
             <Swiper
                 slidesPerView={1}
                 navigation={true}
+                onSwiper={setSwiper1}
             >
                 {props.data_list.map((data, idx) => {
                     return (
-                        <SwiperSlide key={data.ScenicSpotID || idx}>
+                        <SwiperSlide key={idx}>
                             <div className="flex justify-center py-4">
                                 <props.component data={data} />
                             </div>
@@ -30,16 +36,17 @@ export default function CardList(props) {
             <Swiper
                 slidesPerView={1}
                 navigation={true}
+                onSwiper={setSwiper2}
             >
                 {props.data_list.map((data, idx, arr) => {
                     return (idx % 2 === 0 ?
-                        <SwiperSlide key={data.ScenicSpotID || idx}>
+                        <SwiperSlide key={idx}>
                             <div className="flex justify-center py-8">
                                 <props.component data={props.data_list[idx]} />
                                 <props.component data={props.data_list[idx + 1]} />
                             </div>
                         </SwiperSlide>
-                        : <div key={data.ScenicSpotID || idx}>
+                        : <div key={idx}>
                         </div>
                     );
                 })}
