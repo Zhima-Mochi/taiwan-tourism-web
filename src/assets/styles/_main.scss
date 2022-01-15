@@ -120,38 +120,21 @@
 
 
 .card {
-    width: 480*0.5px;
-    height: 640*0.5px;
+    width: 100px;
+    height: 200px;
     border-radius: 12px;
     margin: 0 4px;
 
     @include sm-width {
-        width: 480*0.35px;
-        height: 640*0.35px;
-        margin: 0 8px;
-    }
-
-    @include md-width {
-        width: 480*0.35px;
-        height: 640*0.35px;
+        width: 22vw;
+        height: 28vw;
         margin: 0 8px;
     }
 
     @include lg-width {
-        width: 480*0.4px;
-        height: 640*0.4px;
+        width: 18vw;
+        height: 24vw;
         margin: 0 12px;
-    }
-
-    @include xl-width {
-        width: 480*0.5px;
-        height: 640*0.5px;
-        margin: 0 12px;
-    }
-
-    @include xxl-width {
-        width: 480*0.6px;
-        height: 640*0.6px;
     }
 }
 
@@ -166,8 +149,3 @@
     height: 43%;
 }
 
-.test {
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.5s linear;
-}

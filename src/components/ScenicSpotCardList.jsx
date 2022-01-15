@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import ScenicSpotCard from "./ScenicSpotCard";
+import { ReactComponent as ArrowBack } from '../assets/img/arrow_back.svg';
+import { ReactComponent as ArrowForward } from '../assets/img/arrow_forward.svg';
 
 const jump = 3
 export default function ScenicSpotCardList(props) {
@@ -11,21 +13,21 @@ export default function ScenicSpotCardList(props) {
         <div className="hidden sm:block">
             <div className="flex items-center justify-between">
                 <div>
-                    {focusIdx !== 0 ? <div className="btn w-4 h-40 flex items-center" onClick={() => setFocusIdx(focusIdx - jump)}>
-                        <div className="text-center text-xl font-bold text-gray-500">〈</div>
-                    </div> :
-                        <div className="w-4"></div>}
+                    {focusIdx !== 0 ?
+                        <ArrowBack className="btn" onClick={() => setFocusIdx(focusIdx - jump)} fill="gray" />
+                        :
+                        <ArrowBack className="" fill="#CCCCCC" />}
                 </div>
-                <div className="flex justify-between">
+                <div className="w-11/12 flex justify-between">
                     <ScenicSpotCard data={scenicspot_data[focusIdx]} />
                     <ScenicSpotCard data={scenicspot_data[focusIdx + 1]} />
                     <ScenicSpotCard data={scenicspot_data[focusIdx + 2]} />
                 </div>
                 <div>
-                    {focusIdx + 3 < scenicspot_data.length ? <div className="btn w-4 h-40 flex items-center" onClick={() => setFocusIdx(focusIdx + jump)}>
-                        <div className="text-center text-xl font-bold text-gray-500">〉</div>
-                    </div> :
-                        <div className="w-4"></div>
+                    {focusIdx + 3 < scenicspot_data.length ?
+                        <ArrowForward className="btn" onClick={() => setFocusIdx(focusIdx + jump)} fill="gray" />
+                        :
+                        <ArrowForward className="" fill="#CCCCCC" />
                     }
                 </div>
             </div>
