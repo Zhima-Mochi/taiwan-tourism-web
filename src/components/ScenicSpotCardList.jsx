@@ -1,13 +1,13 @@
-import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import ScenicSpotCard from "./ScenicSpotCard";
 import CardList from "./CardList";
 import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper';
+import ScenicSpotCardModal from "./ScenicSpotModal";
 
 export default function ScenicSpotCardList(props) {
     const scenicspot_data = useSelector(state => state.scenicspot_data);
     return (
-        <CardList component={ScenicSpotCard} data_list={scenicspot_data} />
+        <CardList component={ScenicSpotCard} modalComponent={ScenicSpotCardModal} data_list={scenicspot_data} />
     );
     // return (<>
     //     <div className="sm:hidden">
