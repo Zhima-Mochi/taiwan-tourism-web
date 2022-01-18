@@ -20,6 +20,10 @@
     font-family: $default-font-style;
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
 .header {
     height: $header-sm-height;
 
