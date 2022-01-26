@@ -1,10 +1,12 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 export default function Modal(props) {
     const [show, setShow] = [props.show, props.setShow];
+    const contentTag = useRef(null);
     useEffect(() => {
         if (show) {
             document.body.classList.add("no-scroll");
+            contentTag.current.scrollTop = 0;
         } else {
             document.body.classList.remove("no-scroll");
         }
@@ -17,7 +19,7 @@ export default function Modal(props) {
                 }
             }}
             >
-                <div className="modal-content relative" >
+                <div className="modal-content relative" ref={contentTag}>
                     <div className="modal-close absolute top-2 right-2 lg:top-4 lg:right-4">123</div>
                     <props.component data={props.data} />
                 </div>
