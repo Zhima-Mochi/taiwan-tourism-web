@@ -1,25 +1,36 @@
 import { useEffect, useState } from "react"
 import { useDispatch } from "react-redux";
-import { clean_data, fetch_scenicspots_begin } from "../actions";
+import { clean_data, fetch_activity_begin, fetch_hotel_begin, fetch_restaurant_begin, fetch_scenicspots_begin } from "../actions";
 import { ReactComponent as Search } from '../assets/img/search_white_24dp.svg';
 import { region_lst } from "../constants/region_lst";
 const fetch_lim = 36;
+
 export default function Banner() {
     const [region, setRegion] = useState('all');
     const [keyword, setKeyword] = useState("");
     const dispatch = useDispatch();
+    function select_action(region, keyword, skip, limit) {
+        dispatch(clean_data());
+        dispatch(fetch_scenicspots_begin(region, keyword, skip, limit));
+        dispatch(fetch_restaurant_begin(region, keyword, skip, limit));
+        dispatch(fetch_activity_begin(region, keyword, skip, limit));
+        dispatch(fetch_hotel_begin(region, keyword, skip, limit));
+    }
     useEffect(() => {
         dispatch(clean_data());
         console.log(Math.random() * region_lst.length)
         dispatch(fetch_scenicspots_begin(region_lst[Math.floor(Math.random() * region_lst.length)].eng, "", 0, fetch_lim));
+        dispatch(fetch_restaurant_begin(region_lst[Math.floor(Math.random() * region_lst.length)].eng, "", 0, fetch_lim));
+        dispatch(fetch_activity_begin(region_lst[Math.floor(Math.random() * region_lst.length)].eng, "", 0, fetch_lim));
+        dispatch(fetch_hotel_begin(region_lst[Math.floor(Math.random() * region_lst.length)].eng, "", 0, fetch_lim));
     }, [dispatch])
     return (
         <div className="banner">
             <div className="wrap flex flex-col items-center">
                 <h1 className="text-white decor tracking-widest df-ft-fm text-sm lg:text-lg mt-4 lg:mt-8 mb-4">TRAVEL AROUND TAIWAN, BE FUN!</h1>
                 <div className="w-full md:w-96 flex justify-center items-center mb-4">
-                    <input className="input w-full h-9 rounded-l df-ft-fm" placeholder="輸入目的地、景點或相關關鍵字" onChange={(e) => setKeyword(e.target.value)} onKeyDown={(e) => { if (e.key === 'Enter') { dispatch(clean_data()); dispatch(fetch_scenicspots_begin(region, keyword, 0, fetch_lim)); } }}></input>
-                    <div className="btn main-bg-color h-9 rounded-r flex w-8 justify-center items-center" onClick={() => { dispatch(clean_data()); dispatch(fetch_scenicspots_begin(region, keyword, 0, fetch_lim)); }}>
+                    <input className="input w-full h-9 rounded-l df-ft-fm" placeholder="輸入目的地、景點或相關關鍵字" onChange={(e) => setKeyword(e.target.value)} onKeyDown={(e) => { if (e.key === 'Enter') { select_action(region, keyword, 0, fetch_lim); } }}></input>
+                    <div className="btn main-bg-color h-9 rounded-r flex w-8 justify-center items-center" onClick={() => { select_action(region, keyword, 0, fetch_lim); }}>
                         <Search />
                     </div>
                 </div>
